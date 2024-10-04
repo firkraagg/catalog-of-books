@@ -1,31 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+
 body {
-    background-color: white;
+    background-color: #dec8ba;
     margin: 0;
 }
 
 header {
-    background-color: #004F98;
+    background: linear-gradient(to right, #6B4B3E 0%, #825a4a 25%, #926554 50%, #a2715d 75%, #ab7f6d 100% );
 }
 
 .nav_menu {
     text-align: center;
-    border: 1px solid;
 }
 
 ul {
     padding: 0;
 }
 
-li {
+.nav_menu li {
     display: inline-block;
     margin: 0 10px;
     padding: 10px 20px;
     border-radius: 5px;
+}
 
+.logo {
+    position: relative;
+    width: 15%;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+button {
+    position: absolute;
+    right: 100px;
+    top: 35px;
+    width: 10%;
+    height: 5%;
+    background: linear-gradient(to right, #614438 0%, #6b4b3e 25%, #6b4b3e 50%, #6b4b3e 75%, #614438 100%);
+    text-align: center;
+    font-size: x-large;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    transition-duration: 0.4s;
+    &:hover {
+        background: linear-gradient(to right, #614438 0%, #614438 25%, #714f41 50%, #614438 75%, #614438 100%);
+        color: #dec8ba;
+    }
 }
 
 li a {
     text-decoration: none;
-    color: white;
+    color: lightgray;
     text-transform: uppercase;
+    font-size: xx-large;
+    &:hover {
+        color: white;
+    }
+}
+
+.find_books {
+    display: flex;
+    align-items: center;
+    width: 75%;
+    font-size: x-large;
+    background-image: url("img/bookshelf.jpg");
+    background-size: cover;
+    clip-path: circle(70% at 300px 50%);
+    z-index: -1;
+    height: max(1300px);
+    /*z-index: -1;*/
+}
+
+.citation {
+    font-family: "Cinzel Decorative", sans-serif;
+    text-align: center;
+    color: burlywood;
 }
