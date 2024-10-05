@@ -7,6 +7,11 @@ body {
 
 header {
     background: linear-gradient(to right, #6B4B3E 0%, #825a4a 25%, #926554 50%, #a2715d 75%, #ab7f6d 100% );
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
 }
 
 .nav_menu {
@@ -15,39 +20,41 @@ header {
 
 ul {
     padding: 0;
+    margin: 0;
 }
 
 .nav_menu li {
     display: inline-block;
-    margin: 0 10px;
-    padding: 10px 20px;
-    border-radius: 5px;
+    margin: 0 1vh;
+    padding: 1vh 2vw;
+    border-radius: 0.5vh;
 }
 
 .logo {
     position: relative;
     width: 15%;
-    top: 10px;
+    top: 1vh;
     left: 50%;
     transform: translate(-50%);
 }
 
-button {
-    position: absolute;
-    right: 100px;
-    top: 35px;
+.login_button {
+    position: fixed;
+    right: 10vh;
+    top: 3.5vh;
     width: 10%;
     height: 5%;
-    background: linear-gradient(to right, #614438 0%, #6b4b3e 25%, #6b4b3e 50%, #6b4b3e 75%, #614438 100%);
+    background: linear-gradient(to right, #bf935a 0%, #d4b791 25%, #d4b791 50%, #d4b791 75%, #bf935a 100%);
     text-align: center;
-    font-size: x-large;
+    font-size: 0.8vw;
+    text-transform: uppercase;
     color: black;
     border: none;
-    border-radius: 6px;
+    border-radius: 0.6vh;
     transition-duration: 0.4s;
     &:hover {
-        background: linear-gradient(to right, #614438 0%, #614438 25%, #714f41 50%, #614438 75%, #614438 100%);
-        color: #dec8ba;
+        background: linear-gradient(to right, #bf935a 0%, #bf935a 25%, #d4b791 50%, #bf935a 75%, #bf935a 100%);
+        font-size: 1.0vw;
     }
 }
 
@@ -55,27 +62,101 @@ li a {
     text-decoration: none;
     color: lightgray;
     text-transform: uppercase;
-    font-size: xx-large;
+    font-size: 1vw;
     &:hover {
         color: white;
     }
 }
 
-.find_books {
+.citation_container {
+    position: relative;
     display: flex;
     align-items: center;
-    width: 75%;
-    font-size: x-large;
+    width: 100%;
+    height: 100vh;
+    font-size: 0.8vw;
+}
+
+.citation_background {
+    position: absolute;
+    width: 70%;
+    height: 100vh;
     background-image: url("img/bookshelf.jpg");
     background-size: cover;
-    clip-path: circle(70% at 300px 50%);
-    z-index: -1;
-    height: max(1300px);
-    /*z-index: -1;*/
+    background-position: center;
+    clip-path: circle(65% at 20vh 50%);
+    z-index: 1;
+
 }
 
 .citation {
+    position: relative;
     font-family: "Cinzel Decorative", sans-serif;
     text-align: center;
     color: burlywood;
+    z-index: 2;
+}
+
+.find {
+    position: absolute;
+    right: 15%;
+    top: 10%;
+    color: #614438;
+    font-size: 5vh;
+    font-family: Cursive, Monospace, sans-serif;
+    border-color: red;
+}
+
+.user_input_book {
+    border-width: 0.5vh;
+    border-color: brown;
+}
+
+.user_input_book {
+    position: absolute;
+    right: 11%;
+    top: 22%;
+    font-size: 2.5vh;
+    width: 25vw;
+    height: 3vw;
+}
+
+.boy_reading {
+    position: absolute;
+    width: 30%;
+    top: 30%;
+    right: 10%;
+}
+
+footer {
+    position: absolute;
+    display: flex;
+    background: linear-gradient(to right, #6B4B3E 0%, #825a4a 25%, #926554 50%, #a2715d 75%, #ab7f6d 100% );
+    width: 100%;
+    justify-content: space-between;
+    color: burlywood;
+    font-size: 2vh;
+}
+
+.author {
+    text-align: left;
+    margin-left: 2vh;
+}
+
+.back_to_top {
+    text-align: center;
+}
+
+.back_to_top a {
+    text-decoration: none;
+    color: burlywood;
+    &:hover {
+        color: #e9d0af;
+        font-size: 2vh;
+    }
+}
+
+.contact_us {
+    text-align: right;
+    margin-right: 2vh;
 }
